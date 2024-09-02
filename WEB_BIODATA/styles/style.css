@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --backGroundColor: #e6e6e6;
+    --primaryColor: #8c8269;
+    --secondaryColor: #1f201d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    letter-spacing: -0.8px;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--secondaryColor);
+} 
+
+p {
+    font-size: 1rem; /*1 rem = 16px*/
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--primaryColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Button */
+
+
+/* Logo & Nav Menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--primaryColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--secondaryColor);
+    transition: all 0.3s;
+    padding: 12px 24px;
+}
+
+nav ul li a:hover {
+    color: var(--backGroundColor);
+    background-color: var(--primaryColor);
+    box-shadow:
+      0 0 5px var(--primaryColor),
+      0 0 25px var(--primaryColor),
+      0 0 50px var(--primaryColor),
+      0 0 200px var(--primaryColor);
+}
+
+/* Title */
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--primaryColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--secondaryColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Burger */
+
+.burger div {
+    width: 25px;
+    height: 2.2px;
+    background-color: var(--secondaryColor);
+    margin: 6px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Hero Section */
+#hero {
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryColor);
+}
+
+.hero-right img {
+    width: 45%;
+}
+
+.hero-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 32%; */
+}
